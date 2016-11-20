@@ -10,9 +10,11 @@ export default class CommentBox extends React.Component {
       data: []
     }
     this.loadCommentsFromServer = this.loadCommentsFromServer.bind(this)
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this)
   }
   loadCommentsFromServer() {
     $.ajax({
+      type: 'GET',
       url: this.props.url,
       dataType: 'json',
       cache: false,
@@ -68,6 +70,6 @@ export default class CommentBox extends React.Component {
   }
 }
 ReactDOM.render(
-	<CommentBox url="../api/comments.json" pollInterval={2000} />,
+	<CommentBox url="/api/comments.json" pollInterval={2000} />,
 	document.getElementById('content')
 );

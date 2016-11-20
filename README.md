@@ -28,6 +28,12 @@ the learning process of react.
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   },
 ```
+dev 中各个参数的含义：
+* `webpack-dev-server` 在 localhost:8080 建立一个 Web 服务器
+* `--devtool eval` 映射编译好的源码，用于调试
+* `--progress` 显示代码打包进度
+* `--colors` 表示在命令行中显示颜色
+* `--content-base` 来指定 server 启动后的内容目录
 具体配置请看webpack.config.js文件
 
 ### 参考

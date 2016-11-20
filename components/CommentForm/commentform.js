@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class CommentForm extends React.Component {
-    getInitialState() {
-        return {
+    constructor(props) {
+        super(props)
+        this.state = {
             author: '',
-            text: '',
+            text: ''
         }
+        this.handleAuthorChange = this.handleAuthorChange.bind(this)
+        this.handleTextChange = this.handleTextChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)        
     }
     handleAuthorChange(e) {
         this.setState({
@@ -27,7 +31,7 @@ export default class CommentForm extends React.Component {
         }
         this.props.onCommentSubmit({
             author: author,
-            text:text
+            text: text
         });
         this.setState({
             author: '',

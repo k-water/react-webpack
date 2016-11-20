@@ -26,5 +26,15 @@ module.exports = {
             test: /\.(png|jpg)$/,
             loader: 'url?limit=50000'
         }]
-    }
+    },
+    resolve: {
+        extensions: ['', '.js', '.json', 'jsx']
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+    ]
 }

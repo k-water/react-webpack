@@ -28,7 +28,7 @@ export default class CommentBox extends React.Component {
       }.bind(this),
     });
   }
-  
+
   handleCommentSubmit(comment) {
     var comments = this.state.data;
     comment.id = Date.now();
@@ -54,7 +54,7 @@ export default class CommentBox extends React.Component {
       }.bind(this)
     });
   }
-  
+
   componentDidMount() {
     this.loadCommentsFromServer();
     setInterval(this.loadCommentsFromServer, this.props.pollInterval);
@@ -70,6 +70,6 @@ export default class CommentBox extends React.Component {
   }
 }
 ReactDOM.render(
-	<CommentBox url="/api/comments.json" pollInterval={2000} />,
+	<CommentBox url="api/comments.json" pollInterval={2000} />,
 	document.getElementById('content')
 );

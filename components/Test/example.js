@@ -9,7 +9,6 @@ var Comment = React.createClass({
 //       __html: rawMarkup
 //     };
 //   },
-
   render: function() {
     return (
       <div className="comment">

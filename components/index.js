@@ -1,5 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CommentBox from './CommentBox/commentbox';
+import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
 // import Test from './Test/example';

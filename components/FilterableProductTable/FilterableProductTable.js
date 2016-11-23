@@ -16,6 +16,7 @@ export default class FilterableProductTable extends React.Component {
             inStockOnly: inStockOnly
         });
     }
+    // 子组件调用父组件的方法，传值，父组件的方法拿到值，从而重新设置state
     render() {
         return (
              <div>

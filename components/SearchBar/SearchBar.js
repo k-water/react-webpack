@@ -5,6 +5,7 @@ export default class SearchBar extends React.Component {
     constructor(props) {
         super(props)
     }
+    //添加反向数据流 调用handleChange方法，回到父组件，设置state，从而重新渲染页面，简单交互
     handleChange() {
         this.props.onUserInput(
             this.refs.filterTextInput.value,
